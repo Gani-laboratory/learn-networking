@@ -1,0 +1,58 @@
+LATIHAN
+
+ada 3 bentuk ip private yaitu :
+10.0.0.0 - 10.255.255.255
+172.16.0.0 - 172.31.255.255
+192.168.0.0 - 192.168.255.255
+
+ex :
+ip private = 172.16.10.0/28
+
+dibutuhkan 14 ip ( 14 komputer )
+
+total ip = 16 jadi ngepas untuk kebutuhkan karena 16 - 2 , angka 2 didapat dari ip network dan ip broadcast
+subnetmask = 256 - 16 = 240 ( jadi penulisan subnet mask nya seperti berikut : 255.255.255.240 )
+
+biasanya block yang dipakai yaitu subnet 1 tapi kali ini saya akan memakai block subnet 2 utk coba2
+
+block subnet 1
+
+ip network = 0
+ip broadcast = 15
+ip range = 1 - 14
+
+block subnet 2
+
+ip network = 16 
+ip broadcast = 31
+ip range = 17 - 30
+
+ip networknya = 172.16.10.16
+ip broadcastnya = 172.16.10.31
+ip rangenya = 172.16.10.17 - 172.16.10.30
+
+block subnet 3
+
+ip network = 32 
+ip broadcast = 47
+ip range = 33 - 46
+
+block subnet 4
+
+ip network = 48 
+ip broadcast = 63
+ip range = 49 - 62
+
+block subnet 5
+
+ip network = 64 
+ip broadcast = 79
+ip range = 65 - 78
+
+block subnet 6
+
+ip network = 80
+ip broadcast = 95 
+ip range = 81 - 94
+
+dan seterusnya sampai ip networknya mencapai sebelum 256 ( ip network < 256 )
